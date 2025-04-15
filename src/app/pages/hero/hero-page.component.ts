@@ -9,9 +9,10 @@ export class HeroPageComponent {
   name = signal('Ironman');
   age= signal(45);
 
-  // full = computed(() => {
-  //   return `${this.name()} - ${this.age()}`
-  // });
+   fullDescription = computed(() => {
+     const desciptionFull = `${this.name()} - ${this.age()}`.toUpperCase();
+     return desciptionFull
+   });
 
 
   constructor() {
