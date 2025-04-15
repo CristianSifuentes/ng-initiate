@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
 
 @Component({
   // template:`
@@ -15,22 +15,38 @@ import { Component } from "@angular/core";
      button {
       padding: 5px;
       margin: 5px 10px;
-      with: 75px;
+      width: 75px;
      }
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterPageComponent {
+  //Zonejs -> Zoneless
 
   counter = 15;
+  counterSignal = signal(10);
+
+  constructor() {
+     setInterval(()=> {
+      console.log('Interval called')
+      // this.counterSignal.update((v) => v + 1);
+      //this.increaseBy(1);
+      // this.counter += 1;
+     }, 2000);
+  }
 
   increaseBy(value: number) {
     this.counter += value;
+    // this.counterSignal.set(this.counterSignal() + value);
+    this.counterSignal.update((prev) => prev + value);
+
   }
   decreaseBy(value: number) {
     this.counter -= value;
   }
   reset(){
     this.counter = 0;
+    this.counterSignal.set(0);
   }
 
 }
