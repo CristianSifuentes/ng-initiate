@@ -7,14 +7,12 @@
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-
 .dbz-title {
   text-align: center;
   color: #fff;
   font-size: 2rem;
   text-shadow: 2px 2px 4px #000;
 }
-
 .dbz-form {
   display: flex;
   gap: 0.5rem;
@@ -22,13 +20,11 @@
   justify-content: center;
   margin-bottom: 1rem;
 }
-
 .dbz-form input {
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
 }
-
 .dbz-form button {
   background-color: #ff5722;
   color: #fff;
@@ -38,16 +34,13 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 .dbz-form button:hover {
   background-color: #e64a19;
 }
-
 .dbz-list {
   list-style: none;
   padding: 0;
 }
-
 .dbz-list li {
   background-color: #fff3e0;
   padding: 1rem;
@@ -58,30 +51,24 @@
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .dbz-list li.super-saiyan {
   border-left: 6px solid gold;
   background: linear-gradient(to right, #fff3e0, #ffeb3b);
 }
-
 .dbz-list li.strong {
   border-left: 6px solid orange;
 }
-
 .dbz-list li.normal {
   border-left: 6px solid gray;
 }
-
 .name {
   font-weight: bold;
   color: #333;
 }
-
 .power {
   font-size: 0.9rem;
   color: #666;
 }
-
 .remove {
   background: transparent;
   border: none;

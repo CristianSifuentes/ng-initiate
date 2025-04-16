@@ -1,0 +1,34 @@
+<h1>
+  Hi Dragonball Page 2
+</h1>
+<hr />
+
+<section class="row">
+
+  <div class="col-12 col-sm-6">
+    <h3>Add:</h3>
+    <input type="text" class="form-control" placeholder="Name"/>
+    <input type="number" class="form-control mt-2" placeholder="skill"/>
+    <button class="mt-2 btn btn-primary">Add</button>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <h3>List</h3>
+    <ul>
+      @for (character of characters(); track character.id; let idx = $index) {
+        <li>
+          <span>{{idx + 1}}{{character.name}}</span>
+          <strong [ngClass]="powerClasses()">({{ character.power}})</strong>
+          <!-- <strong [class.text-danger]="character.power > 9000" [class.text-primary]="character.power < 9000">
+            ({{ character.power}})
+          </strong> -->
+        </li>
+      }
+    </ul>
+
+  </div>
+
+</section>
+
+
+

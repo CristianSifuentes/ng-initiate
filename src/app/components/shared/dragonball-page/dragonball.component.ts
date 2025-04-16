@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
     standalone: true,
     imports: [CommonModule, FormsModule], // 👈 Include necessary Angular modules
     templateUrl: './dragonball.component.html',
-    styleUrls: ['./dragonball.component.css'],
+    styleUrls: ['./dragonball.component.scss'],
   })
   export class DragonBallComponent {
     newCharacter = {name : '', powerLevel: 0};
@@ -21,13 +21,14 @@ import { FormsModule } from '@angular/forms';
 
     }
 
+
+
     removeCharacter(character: { name: string; powerLevel: number }) {
       this.characters = this.characters.filter(c => c !== character);
     }
     getPowerClass(powerLevel: number): string {
-      if (powerLevel >= 9000) return 'super-saiyan';
+      if (powerLevel >= 9000) return 'super-saiyanc';
       if (powerLevel >= 3000) return 'strong';
       return 'normal';
-
     }
   }

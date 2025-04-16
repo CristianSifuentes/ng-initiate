@@ -36,6 +36,41 @@ Update your standalone component definition to include required modules in the `
 
 ### 📦 Example Fix: `dragonball.component.ts`
 
+```html
+<!-- dragonball.component.html -->
+<div class="dbz-container">
+  <h1 class="dbz-title">⚡ Dragon Ball Power Level Tracker ⚡</h1>
+
+  <form class="dbz-form" (ngSubmit)="addCharacter()">
+    <input
+      type="text"
+      placeholder="Character Name"
+      [(ngModel)]="newCharacter.name"
+      name="name"
+      required
+    />
+    <input
+      type="number"
+      placeholder="Power Level"
+      [(ngModel)]="newCharacter.powerLevel"
+      name="powerLevel"
+      required
+    />
+    <button type="submit">Add Fighter</button>
+  </form>
+
+  <ul class="dbz-list">
+    <li *ngFor="let character of characters" [ngClass]="getPowerClass(character.powerLevel)">
+      <span class="name">{{ character.name }}</span>
+      <span class="power">PL: {{ character.powerLevel }}</span>
+      <button class="remove" (click)="removeCharacter(character)">✖</button>
+    </li>
+  </ul>
+</div>
+
+```
+
+
 ```ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -44,9 +79,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-dragonball',
   standalone: true,
+  imports: [CommonModule, FormsModule], // 👈 Include necessary Angular modules
   templateUrl: './dragonball.component.html',
   styleUrls: ['./dragonball.component.scss'],
-  imports: [CommonModule, FormsModule], // 👈 Include necessary Angular modules
 })
 export class DragonBallComponent {
   newCharacter = { name: '', powerLevel: 0 };
