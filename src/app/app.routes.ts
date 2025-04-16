@@ -3,6 +3,7 @@ import { CounterPageComponent } from './pages/counter/counter-page.component';
 import { HeroPageComponent } from './pages/hero/hero-page.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { StandaloneComponent } from './pages/standalone-component/standalone-component';
+import { DragonBallComponent } from './components/shared/dragonball-page/dragonball.component';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,10 @@ export const routes: Routes = [
   }, {
     path: 'standalone',
     component: StandaloneComponent
+  }, {
+    path: 'dragonball',
+    component: DragonBallComponent
   }
+
 
 ];
