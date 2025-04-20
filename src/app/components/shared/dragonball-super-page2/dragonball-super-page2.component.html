@@ -1,0 +1,43 @@
+<!-- <h1>
+  Hi Dragonball Page 2
+</h1>
+<hr />
+
+<section class="row">
+
+  <div class="col-12 col-sm-6">
+    <dragonball-character-add (newCharacter)="$event"></dragonball-character-add>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <dragonball-character-list [characters]="characters()"/>
+  </div>
+
+</section>
+
+
+ -->
+
+
+ <h1>DragonBall Page</h1>
+<hr />
+
+<section class="row">
+  <div class="col-12 col-sm-6">
+    <!-- dragonball-character-add -->
+    <!-- Aquí -->
+    <dragonball-character-add
+      (newCharacter)="addCharacter($event)"
+    />
+
+    <!-- Hasta aquí -->
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <!-- <dragonball-character-list [characters]="characters()" listName="List"></dragonball-character-list> -->
+    <!-- <dragonball-character-list
+      listName="List"
+      [characters]="characters()"
+    /> -->
+  </div>
+</section>
