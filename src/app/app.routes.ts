@@ -5,6 +5,7 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
 import { StandaloneComponent } from './pages/standalone-component/standalone-component';
 import { DragonBallComponent } from './components/shared/dragonball-page/dragonball.component';
 import { DragonballPage2Component } from './components/shared/dragonball-page2/dragonball-page2.component';
+import { DragonballSuperPage2Component } from './components/shared/dragonball-super-page2/dragonball-super-page2.component';
 
 export const routes: Routes = [
   {
@@ -28,6 +29,9 @@ export const routes: Routes = [
     path: 'dragonball2',
     component: DragonballPage2Component
   }
-
+  , {
+    path: 'dragonball2-super',
+    component: DragonballSuperPage2Component
+  }
 
 ];

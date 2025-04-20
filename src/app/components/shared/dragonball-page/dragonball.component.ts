@@ -18,7 +18,6 @@ import { FormsModule } from '@angular/forms';
         this.characters.push({ ...this.newCharacter });
         this.newCharacter = { name: '', powerLevel: 0 };
       }
-
     }
 
 
